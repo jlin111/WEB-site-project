@@ -1,0 +1,340 @@
+html,body{height: 100%;}
+body{background-color: #eee;}
+
+/*-------------
+Generali
+---------------*/
+.button{
+display: inline-block;
+background-color: #fff;
+color: #000;
+padding: 15px 30px;
+border-radius: 3px;
+text-decoration: none;
+}
+
+.animate{
+-webkit-transition: all 0.3s ease-out; 
+transition: all 0.3s ease-out;
+} /* animazioni dello scroll della barra menù*/
+
+p{ line-height: 22px;}
+a{text-decoration: none;}
+
+
+/*-------------
+Header
+--------------*/
+.header{background-color: #12222d ;}
+
+.header__logo{
+color: #fff; 
+float: left; 
+display: block; 
+padding: 20px;
+}
+
+.header__menu{
+float: right;
+margin: 0;
+padding: 0;
+} 
+
+.header__menu__item{display: inline-block;} /* metto gli elementi della lista in fila orrizontale*/
+
+.header__menu__item a{
+color:#fff; 
+display: block; 
+padding: 20px;
+}
+
+.header__menu__item a:hover{background-color: #000;}  
+/*quando passo su con il puntatore del mouse, lo sfondo diventa nero */
+
+
+.header__icon-bar{display: block; 
+float: right; 
+padding: 20px; 
+display: none;
+}
+
+.header__icon-bar span{
+display: block; 
+height: 3px; 
+width: 30px; 
+background-color: #fff; 
+margin-bottom: 5px;
+}
+
+
+/*-------------
+Cover
+---------------*/
+.cover{height: 70%; 
+background-image: url(https://source.unsplash.com/user/jlin_01/likes);
+background-size: cover;
+-o-background-size: cover;
+-moz-background-size: cover;
+background-position: center center;
+position: relative;
+}
+.cover__caption{
+display: table;
+width: 100%;
+height: 100%;
+position: relative;
+z-index: 1;
+padding: 0 20px;
+
+}
+
+.cover__caption__copy{
+display: table-cell;
+vertical-align: middle;
+text-align: center;
+color: #fff;
+}
+
+.cover__caption__filter{
+background-color: #000;
+width: 100%;
+height: 100%;
+position: absolute;
+z-index: 0;
+opacity: 0.3;
+}
+
+.cover--single{  /* untilizzo un modifier per cambiare l'altezza del cover*/
+height: 50%;
+}
+
+.cover--single h1{
+font-size: 42px;
+}
+
+/*---------------------
+Cards
+----------------------*/
+.cards{
+max-width: 1200px;
+margin: 40px auto;
+}
+.card{
+width: 30%;
+margin: 0 1.5%;
+background-color: #fff;
+float: left;
+}
+
+.card__image{
+width: 100%;
+height: auto;
+}
+
+.card__copy{
+padding: 5px 20px;
+}
+
+.card__copy h3{
+margin-bottom: 0;
+}
+
+/*---------------------
+Banner 
+----------------------*/
+
+.banner{
+background-color: #fff;
+height: 50%;
+margin: 40px auto;
+}
+
+.banner__image{
+background-image: url(https://source.unsplash.com/user/jlin_01/likes/400x400);
+background-size: cover;
+-o-background-size: cover;
+-moz-background-size: cover;
+background-position: center center;
+width: 30%;
+float: left;
+height: 100%;
+
+}
+
+.banner__copy{
+width: 70%;
+float: left;
+height: 100%;
+display: table;
+}
+
+.banner__copy__text{
+display: table-cell;
+vertical-align: middle;
+padding: 30px;
+}
+
+.banner__copy__text h3{
+font-size: 36px;
+margin-bottom: 0px;
+}
+
+.banner__copy__text h4{
+font-size: 22px;
+margin: 5px 0;
+}
+
+/*---------------------
+Footer
+----------------------*/
+.footer{
+background-color: #12222d;
+color: #fff;
+padding: 30px;
+margin-top: 40px;
+}
+
+/*---------------------
+Pagina singola
+----------------------*/
+.single{
+
+}
+
+.single__copy{  
+max-width: 800px;
+margin: 0px auto;
+background-color:#fff ;
+padding: 20px 40px;
+margin-top: -60px;
+position: relative;  /* perchè sennò gli z-index non funzionano*/
+z-index: 1 ;
+}  /* Vado a centrare il testo contenuto nel tag article*/
+
+.single__copy__meta{
+font-weight: bold;
+font-size: 18px;
+font-style: italic;
+}
+
+.single__copy__title{
+font-size: 32px;
+
+}
+
+
+
+
+/*---------------------
+Media Query dei Tablet
+----------------------*/
+@media (max-width: 998px){
+
+.header__icon-bar{display: block;}
+.header__menu__item{display: block;}
+.header__menu{width: 100%; height: 0px; overflow: hidden;} /* con overflow: hidden , nascondo tutti gli elementi che eccedono dalla barra del menù*/
+.is-open{height: 300px; overflow: auto;}
+
+
+.banner__image, .banner__copy{
+width: 50%;
+height: 100%;
+}
+
+}
+
+/*--------------------------
+Media Query degli smartphone
+----------------------------*/
+@media (max-width: 767px){
+
+.header{
+position: fixed;
+z-index: 100;  /* perchè la barra menù deve stare sopra a tutti*/
+width: 100%;
+}  
+
+.header__icon-bar{display: block;}
+.header__menu__item{display: block;}
+
+.header__menu{
+width: 100%; 
+height: 0px; 
+overflow: hidden;
+} /* con overflow: hidden , nascondo tutti gli elementi che eccedono dalla barra del menù*/
+
+.is-open{
+height: 300px; 
+overflow: auto;
+}
+
+/*-----
+Modifico la cover su Smartphone
+-----*/
+.cover{height: 100%;}
+
+/*-----
+Modifico la card su Smartphone
+-----*/
+.card{
+width: 90%;
+margin: 5%;
+}
+
+/*-----------
+Modifico il banner su SmartPhone
+perchè su mobile, l'immagine del banner verrebe ristretta troppo
+e non si vedrebbe nulla.
+------------*/
+.banner{
+height: 100%;
+}
+.banner__image{
+width: 100%;
+height: 50%;
+}
+    
+.banner__copy{
+width: 100%;
+height: 50%;
+}
+
+
+
+}
+
+
+
+
+/*-------------------
+Uso il clearfix, perchè il contenitore header altrimenti si collassa
+e perciò devo pulire il float.
+------------------*/
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  .clearfix { display: inline-block; }
+ 
+  * html .clearfix { height: 1%; }
+  .clearfix { display: block; }
+
+
+  /*
+  Box Sizing: senza il box sizing mi dà un problema con il padding delle 
+  scritte dell'home page, perchè mi sposta l'intero schermo.
+  Con il box sizing invece applico il padding solamente al BOX che contiene 
+  la scritta.
+  */
+
+  *,
+  *::before,
+  *::after{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
