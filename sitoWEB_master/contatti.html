@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <title>TripLin - Contatti</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="form_contatti.css">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <style type="text/css">
+  
+  body{
+    font-family: Source Sans Pro;
+    background: #282828;
+    background: linear-gradient(-45deg, #ee7752, #e73e7e, #23a6d5, #23d5ab);
+    /*background: linear-gradient(132deg, #ec5218, #1665c1);*/
+    background-size: 400% 400%;
+    animation: BackgroundGradient 15s ease infinite;
+    
+}
+
+@-webkit-keyframes BackgroundGradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+  </style>
+  
+</head>
+<body>
+
+    <header class="header clearfix">  
+      <a href="index.html" class="header__logo"> TripLin </a>
+      <a href="" class="header__icon-bar">
+        <span> </span> 
+        <span> </span> 
+        <span> </span> 
+      </a>
+      <ul class="header__menu animate">
+        <li class="header__menu__item"> <a href="index.html" > Home </a></li>
+        <li class="header__menu__item"> <a href="single.html" > Gallery </a></li>
+        <li class="header__menu__item"> <a href="page.html" > About </a></li>
+        <li class="header__menu__item"> <a href="social.html"> Social </a></li>
+        <li class="header__menu__item"> <a href="contatti.html"> Contattaci </a></li>
+   
+      </ul>
+    </header>
+
+    <section id="contact">
+        <div class="sectionheader">	<h1>CONTACT</h1></div>
+        <article>
+        <p>Fateci sapere tutto quello che vi passa per la mente. Possono essere chiarimenti o ulteriori informazioni su qualcosa, noi saremo sempre disponibili a rispondere a tutte le vostre domande!</p>
+          
+            <label for="checkcontact" class="contactbutton"><div class="mail"></div></label><input id="checkcontact" type="checkbox">
+        
+            <form action="" method="post" class="contactform">
+              <p class="input_wrapper"><input type="text" name="contact_nom" value=""  id ="contact_nom"><label for="contact_nom">NAME</label></p>
+              <p class="input_wrapper"><input type="text" name="contact_email" value=""  id ="contact_email"><label for="contact_email">EMAIL</label></p>
+              <p class="input_wrapper"><input type="text" name="contact_sujet" value=""  id ="contact_sujet"><label for="contact_sujet">SUBJECT</label></p>
+              <p class="textarea_wrapper"><textarea name="contact_message" id="contact_message"></textarea></p>
+              <p class="submit_wrapper"><input type="submit" value="ENVOYER"></p>			
+            </form>
+        </article>
+    </section>
+
+    <footer class="footer">
+      <p>Copyright - 2019/2020 LinJialeDesign.com</p>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      /*----------------
+      questo script permette di far funzionare la jQuery, non fa altro che fa eseguire
+      le istruzioni che sono tra le graffe, quando il documento è "ready", ovvero quando 
+      il documento è pronto e perciò quando saranno già stati caricati tutti i javascript
+      ------------------- */
+      $(document).ready(function(){
+        $(".header__icon-bar").click(function(e){
+          $(".header__menu").toggleClass('is-open');  /* il metodo toggleClass mi permette di togliere e aggiungere una classe*/
+          e.preventDefault(); /* senza questo metodo, la pagina viene ricaricata continuamente senza mostrare la barra scorrevole*/
+        })
+      });
+    </script>
+
+   
+
+    </body>
+</html>

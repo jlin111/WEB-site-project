@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <title>TripLin - Contatti</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="grandient_effect.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  
+</head>
+<body>
+
+    <header class="header clearfix">  
+      <a href="index.html" class="header__logo"> TripLin </a>
+      <a href="" class="header__icon-bar">
+        <span> </span> 
+        <span> </span> 
+        <span> </span> 
+      </a>
+      <ul class="header__menu animate">
+        <li class="header__menu__item"> <a href="index.html" > Home </a></li>
+        <li class="header__menu__item"> <a href="single.html" > Gallery </a></li>
+        <li class="header__menu__item"> <a href="page.html" > About </a></li>
+        <li class="header__menu__item"> <a href="social.html"> Social </a></li>
+        <li class="header__menu__item"> <a href="contatti.html"> Contattaci </a></li>
+   
+      </ul>
+    </header>
+
+    
+    <div class="wrapper" style="height: 110%;">
+      <h1>-Socializza-</h1>
+      <p>Follow us on these social media!</p>
+      <br>
+      <br>
+    <ul class="social-networks square spin-icon">
+        <li><a href="https://www.linkedin.com/" class="icon-linkedin">LinkedIn</a></li>
+        <li><a href="https://twitter.com/" class="icon-twitter">Twitter</a></li>
+        <li><a href="https://www.facebook.com/" class="icon-facebook">Facebook</a></li>
+        <li><a href="https://twitch.tv" class="icon-twitch">Twitch</a></li>
+        <li><a href="https://github.com" class="icon-github">GitHub</a></li>
+        <li><a href="https://pinterest.com" class="icon-pinterest">Pinterest</a></li>
+        <li><a href="https://instagram.com" class="icon-instagram">Instagram</a></li>
+      </ul>
+    
+    </div>
+
+
+    <footer class="footer">
+      <p>Copyright - 2019/2020 LinJialeDesign.com</p>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      /*----------------
+      questo script permette di far funzionare la jQuery, non fa altro che fa eseguire
+      le istruzioni che sono tra le graffe, quando il documento è "ready", ovvero quando 
+      il documento è pronto e perciò quando saranno già stati caricati tutti i javascript
+      ------------------- */
+      $(document).ready(function(){
+        $(".header__icon-bar").click(function(e){
+          $(".header__menu").toggleClass('is-open');  /* il metodo toggleClass mi permette di togliere e aggiungere una classe*/
+          e.preventDefault(); /* senza questo metodo, la pagina viene ricaricata continuamente senza mostrare la barra scorrevole*/
+        })
+      });
+    </script>
+
+   
+
+    </body>
+</html>
