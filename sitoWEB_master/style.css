@@ -123,11 +123,18 @@ Cards
 max-width: 1200px;
 margin: 40px auto;
 }
+
 .card{
 width: 30%;
 margin: 0 1.5%;
 background-color: #fff;
 float: left;
+transition: 0.7s;
+}
+
+.card:hover{
+  opacity: 0.8;
+  transform: scale(1.18);
 }
 
 .card__image{
@@ -162,7 +169,11 @@ background-position: center center;
 width: 30%;
 float: left;
 height: 100%;
-
+transition: transform .2s;
+}
+.banner__image:hover{
+  opacity: 0.85;
+  transform: scale(1.25);
 }
 .banner__image__me{
   background-image: url(https://source.unsplash.com/collection/8974230/400x400);
@@ -263,7 +274,6 @@ Media Query degli smartphone
 @media (max-width: 767px){
 
 .header{
-position: fixed;
 z-index: 100;  /* perchè la barra menù deve stare sopra a tutti*/
 width: 100%;
 }  
